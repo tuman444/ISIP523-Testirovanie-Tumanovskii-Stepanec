@@ -10,8 +10,8 @@
 ---
 Вариант 7
 
-!(https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/1_задание.png)
+![https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/1_задание.png]
 
 ![[https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/2%20задание.jpg?raw=true]]
 
-![[https://disk.yandex.ru/i/Tkq7iPCsGs1BsQ]]
+![https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/3_задание.jpg?raw=true]
