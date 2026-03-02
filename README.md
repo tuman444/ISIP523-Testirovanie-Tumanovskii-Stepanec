@@ -9,4 +9,4 @@
 
 ---
 Вариант 7
-![1_задание](C:\Users\ника\source\repos\ISIP523-Testirovanie-Tumanovskii-Stepanec)
+![1_задание](https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ)
