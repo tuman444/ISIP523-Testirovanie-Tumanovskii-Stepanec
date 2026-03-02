@@ -8,3 +8,5 @@
 Группа: 3ИСиП-523
 
 ---
+Вариант 7
+![1_задание](C:\Users\ника\source\repos\ISIP523-Testirovanie-Tumanovskii-Stepanec)
