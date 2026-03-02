@@ -10,7 +10,7 @@
 ---
 Вариант 7
 
-![1_пример](https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ)
+![1_пример]([https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/1_задание.png))
 
 ![2_пример](https://disk.yandex.ru/i/XGJ5pPx_5WArzQ)
 
