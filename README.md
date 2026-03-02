@@ -10,11 +10,11 @@
 ---
 Вариант 7
 
-![https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/1_задание.png?raw=true]
+![1_Пример](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/1_задание.png?raw=true)
 
-![[https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/2%20задание.jpg?raw=true]]
+![2_Пример](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/2%20задание.jpg?raw=true)
 
-![https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/3_задание.jpg?raw=true]
+![3_Пример](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/3_задание.jpg?raw=true)
 
 ---
 Использовали приложение *Visual Studio 2022*. Шаблон приложения: *Консольное приложение Wpf(.NET Framework) на языке программирования С#.*
