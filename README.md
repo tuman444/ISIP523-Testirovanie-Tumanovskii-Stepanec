@@ -10,4 +10,4 @@
 ---
 Вариант 7
 
-[![1_задание](https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ)]
+[![1_задание](https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ)
