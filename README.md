@@ -12,6 +12,6 @@
 
 ![1_пример]([https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/1_задание.png))
 
-![2_пример](https://disk.yandex.ru/i/XGJ5pPx_5WArzQ)
+![2_пример]([https://disk.yandex.ru/i/XGJ5pPx_5WArzQ](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/2%20задание.jpg?raw=true))
 
 ![3_пример](https://disk.yandex.ru/i/Tkq7iPCsGs1BsQ)
