@@ -10,9 +10,15 @@
 ---
 Вариант 7
 
+*1 Пример*
+
 ![1_Пример](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/1_задание.png?raw=true)
 
+*2 Пример*
+
 ![2_Пример](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/2%20задание.jpg?raw=true)
+
+*3 Пример*
 
 ![3_Пример](https://github.com/tuman444/ISIP523-Testirovanie-Tumanovskii-Stepanec/blob/pr4/3_задание.jpg?raw=true)
 
