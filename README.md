@@ -10,8 +10,8 @@
 ---
 Вариант 7
 
-![1_задание](https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ)
+![1_пример](https://disk.yandex.ru/i/e_BUW2Y7zAN8KQ)
 
-![2_задание](https://disk.yandex.ru/i/XGJ5pPx_5WArzQ)
+![2_пример](https://disk.yandex.ru/i/XGJ5pPx_5WArzQ)
 
-![3_задание](https://disk.yandex.ru/i/Tkq7iPCsGs1BsQ)
+![3_пример](https://disk.yandex.ru/i/Tkq7iPCsGs1BsQ)
