@@ -153,4 +153,76 @@ namespace UnitTestProject1
             Assert.IsTrue(result >= 0);
         }
     }
+
+    [TestClass]
+    public class ThreeCaseTests
+    {
+        [TestMethod]
+        public void TryParseValue_ValidNumber_ReturnsTrue()
+        {
+            bool result = ThreeCaseCalculator.TryParseValue("3.0", out double x);
+
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void TryParseValue_EmptyString_ReturnsFalse()
+        {
+            bool result = ThreeCaseCalculator.TryParseValue("", out _);
+
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void TryParseValue_Letters_ReturnsFalse()
+        {
+            bool result = ThreeCaseCalculator.TryParseValue("abc", out _);
+
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsInRange_ValidValue_ReturnsTrue()
+        {
+            bool result = ThreeCaseCalculator.IsInRange(3.0);
+
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsInRange_LessThanMinimum_ReturnsFalse()
+        {
+            bool result = ThreeCaseCalculator.IsInRange(2.0);
+
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void IsInRange_GreaterThanMaximum_ReturnsFalse()
+        {
+            bool result = ThreeCaseCalculator.IsInRange(5.0);
+
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void Calculate_ValidValue_ReturnsCorrectResult()
+        {
+            double x = 3;
+
+            double result = ThreeCaseCalculator.Calculate(x);
+
+            double expected =
+                9 * (x + 15 * Math.Sqrt(Math.Pow(x, 3) + Math.Pow(2.3, 3)));
+
+            Assert.AreEqual(expected, result, 0.0001);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Calculate_OutOfRange_ThrowsException()
+        {
+            ThreeCaseCalculator.Calculate(1);
+        }
+    }
 }
