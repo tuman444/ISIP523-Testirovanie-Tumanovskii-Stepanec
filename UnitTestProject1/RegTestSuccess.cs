@@ -13,11 +13,11 @@ namespace UnitTestProject1
             var page = new RegisterPage();
 
             bool result = page.Register(
-                "Алексей",
-                "Алексеевич",
-                "new_user_222",
-                "5555",
-                "5555"
+                "12345",
+                "54321",
+                "55555555",
+                "55555555",
+                "55555555"
             );
 
             Assert.IsTrue(result);
