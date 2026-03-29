@@ -26,51 +26,39 @@ namespace PR6._3.Pages
         }
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtName.Text) ||
-                string.IsNullOrWhiteSpace(TxtLastName.Text) ||
-                string.IsNullOrWhiteSpace(TxtLogin.Text) ||
-                string.IsNullOrWhiteSpace(PBoxPass.Password))
-            {
+            Register(TxtName.Text, TxtLastName.Text, TxtLogin.Text, PBoxPass.Password, PBoxPassConfirm.Password);
+        }
 
-                MessageBox.Show("Заполните все окна", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
+
+        public bool Register(string name, string lastName, string login, string pass, string confirmPass)
+        {
+            if (string.IsNullOrWhiteSpace(name) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(login) ||
+                string.IsNullOrWhiteSpace(pass))
+            {
+                return false;
             }
 
-            if (PBoxPass.Password != PBoxPassConfirm.Password)
-            {
-                MessageBox.Show("Пароли не совпадают!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+            if (pass != confirmPass)
+                return false;
 
-            var existingUser = Core.Context.Users.FirstOrDefault(u => u.Login == TxtLogin.Text);
+            var existingUser = Core.Context.Users.FirstOrDefault(u => u.Login == login);
             if (existingUser != null)
-            {
-                MessageBox.Show("Пользователь с таким логином уже существует!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
+                return false;
 
             Users newUser = new Users()
             {
-                FirstName = TxtName.Text,
-                LastName = TxtLastName.Text,
-                Login = TxtLogin.Text,
-                Password = PBoxPass.Password
+                FirstName = name,
+                LastName = lastName,
+                Login = login,
+                Password = pass
             };
 
-            try
-            {
-                Core.Context.Users.Add(newUser);
-                Core.Context.SaveChanges();
+            Core.Context.Users.Add(newUser);
+            Core.Context.SaveChanges();
 
-                MessageBox.Show("Регистрация прошла успешно! Теперь вы можете войти.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                NavigationService.GoBack();
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show("Ошибка при сохранении: " + ex.Message, "Ошибка БД", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
+            return true;
         }
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)

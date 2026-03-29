@@ -26,26 +26,43 @@ namespace PR6._3.Pages
         }
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TxtLogin.Text) || string.IsNullOrWhiteSpace(PBoxPassword.Password))
+            Auth(TxtLogin.Text, PBoxPassword.Password);
+        }
+
+        public bool IsTest = false;
+
+        public bool Auth(string login, string pass)
+        {
+            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(pass))
             {
-                MessageBox.Show("Пожалуйста, заполните все поля!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
+                if (!IsTest)
+                    MessageBox.Show("Пожалуйста, заполните все поля!");
+                return false;
             }
 
-            var user = Core.Context.Users.FirstOrDefault(u => u.Login == TxtLogin.Text && u.Password == PBoxPassword.Password);
+            var user = Core.Context.Users.FirstOrDefault(u => u.Login == login && u.Password == pass);
 
             if (user != null)
             {
                 Core.CurrentUser = user;
-                MessageBox.Show($"Добро пожаловать {user.FirstName}!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                NavigationService.Navigate(new Pages.MainPage());
+                if (!IsTest)
+                {
+                    MessageBox.Show($"Добро пожаловать, {user.FirstName}!");
+
+                    if (NavigationService != null)
+                        NavigationService.Navigate(new Pages.MainPage());
+                }
+
+                return true;
             }
             else
             {
-                MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+                if (!IsTest)
+                    MessageBox.Show("Неверный логин или пароль");
 
+                return false;
+            }
         }
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
