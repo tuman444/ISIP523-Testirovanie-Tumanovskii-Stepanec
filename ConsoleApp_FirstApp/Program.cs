@@ -26,7 +26,7 @@ namespace ConsoleApp_FirstApp
 
             foreach (Galaxy theGalaxy in theGalaxies)
             {
-                Console.WriteLine(theGalaxy.Name + "  " + theGalaxy.MegaLightYears + ",  " + theGalaxy.GalaxyType);
+                Console.WriteLine(theGalaxy.Name + "  " + theGalaxy.MegaLightYears + ",  " + theGalaxy.GalaxyType.MyGType);
             }
 
             // Expected Output:
@@ -44,7 +44,7 @@ namespace ConsoleApp_FirstApp
         public string Name { get; set; }
 
         public double MegaLightYears { get; set; }
-        public object GalaxyType { get; set; }
+        public GType GalaxyType { get; set; }
 
     }
 
@@ -60,7 +60,7 @@ namespace ConsoleApp_FirstApp
                 case 'E':
                     MyGType = Type.Elliptical;
                     break;
-                case 'l':
+                case 'I':
                     MyGType = Type.Irregular;
                     break;
                 case 'L':
