@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <TextBlock Text="Входной текст:" Margin="0,0,0,5" FontWeight="Bold"/>
+            <TextBox x:Name="InputTextBox" Height="60" TextWrapping="Wrap" 
+                     ToolTip="Введите текст для шифрования или дешифрования"/>
+
+            <UniformGrid Columns="2" Margin="0,15,0,0">
+                <StackPanel Margin="0,0,10,0">
+                    <TextBlock Text="Строк (Rows):" Margin="0,0,0,5"/>
+                    <TextBox x:Name="RowsInput" ToolTip="Введите количество строк матрицы (целое число)"/>
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <TextBlock Text="Столбцов (Cols):" Margin="0,0,0,5"/>
+                    <TextBox x:Name="ColsInput" ToolTip="Введите количество столбцов матрицы (целое число)"/>
+                </StackPanel>
+            </UniformGrid>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+                <Button Content="Зашифровать" Width="120" Margin="10" Click="OnEncryptClick"
+                        ToolTip="Записать текст по строкам и прочитать по столбцам"/>
+                <Button Content="Расшифровать" Width="120" Margin="10" Click="OnDecryptClick"
+                        ToolTip="Восстановить исходный текст из матрицы"/>
+            </StackPanel>
+
+            <TextBlock Text="Результат:" Margin="0,0,0,5" FontWeight="Bold"/>
+            <TextBox x:Name="ResultOutput" Height="60" IsReadOnly="True" Background="#F9F9F9"
+                     TextWrapping="Wrap" ToolTip="Здесь появится результат обработки"/>
+        </StackPanel>
     </Grid>
 </Window>

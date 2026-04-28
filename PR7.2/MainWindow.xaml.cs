@@ -24,5 +24,36 @@ namespace PR7._2
         {
             InitializeComponent();
         }
+        private void OnEncryptClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (!int.TryParse(RowsInput.Text, out int r) || !int.TryParse(ColsInput.Text, out int c))
+                    throw new Exception("Укажите числовые размеры матрицы.");
+
+                var service = new MatrixEncryptor();
+                ResultOutput.Text = service.Encrypt(InputTextBox.Text, r, c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка шифрования", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void OnDecryptClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (!int.TryParse(RowsInput.Text, out int r) || !int.TryParse(ColsInput.Text, out int c))
+                    throw new Exception("Укажите числовые размеры матрицы.");
+
+                var service = new MatrixDecryptor();
+                ResultOutput.Text = service.Decrypt(InputTextBox.Text, r, c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка дешифрования", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
     }
 }
