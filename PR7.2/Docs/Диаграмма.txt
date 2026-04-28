@@ -1,0 +1,23 @@
+﻿@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Пользователь" as User
+database "Система" as System
+
+rectangle "Приложение шифрования" {
+  usecase "Шифрование данных" as UC1
+  usecase "Дешифрование данных" as UC2
+  usecase "Валидация входных данных" as UC3
+  usecase "Просмотр подсказок" as UC4
+  
+  User --> UC1
+  User --> UC2
+  User --> UC4
+  
+  UC1 ..> UC3 : Включает
+  UC2 ..> UC3 : Включает
+  
+  UC3 -- System
+}
+@endum
